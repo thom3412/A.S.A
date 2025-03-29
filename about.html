@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos - ASA Automatisme</title>
+    <!-- CSS corrigés -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/quick-fix.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Script diagnostic -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('DOM chargé et prêt');
+        
+        // Forcer l'apparition immédiate des éléments animés
+        const fadeElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .scale-in');
+        console.log('Éléments animés trouvés:', fadeElements.length);
+        
+        fadeElements.forEach(function(el) {
+            el.classList.add('appear');
+            // Forcer l'affichage au cas où
+            el.style.opacity = '1';
+            el.style.transform = 'translateY(0)';
+        });
+    });
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <a href="index.html" class="logo">A.S.A</a>
+                <div class="hamburger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="#">Nos Services <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="alarmes.html">Alarmes</a>
+                            <a href="interphones.html">Interphones</a>
+                            <a href="portails.html">Portails</a>
+                            <a href="videosurveillance.html">Vidéosurveillance</a>
+                            <a href="pergolas.html">Pergolas</a>
+                            <a href="controle-acces.html">Contrôle d'accès</a>
+                        </div>
+                    </li>
+                    <li><a href="entreprise.html">L'Entreprise</a></li>
+                    <li><a href="recrutement.html">Recrutement</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="page-header-content">
+            <h1>À propos de nous</h1>
+            <p>Découvrez notre entreprise et notre expertise dans le domaine de l'automatisme et de la sécurité</p>
+        </div>
+    </header>
+
+    <section id="a-propos" class="section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Notre histoire</h2>
+            </div>
+            <div class="two-columns">
+                <div class="text-column fade-in">
+                    <p>ASA Automatisme est une entreprise spécialisée dans les solutions d'automatisme et de sécurité depuis plus de 10 ans. Nous mettons notre expertise au service de vos projets pour sécuriser et automatiser vos espaces avec des technologies modernes.</p>
+                    <p>Fondée en 2012 par une équipe de passionnés, notre entreprise n'a cessé de se développer et d'innover pour offrir à nos clients des solutions toujours plus performantes et adaptées à leurs besoins.</p>
+                    <h3>Nos valeurs :</h3>
+                    <ul class="checklist">
+                        <li>Innovation : nous recherchons constamment les meilleures technologies</li>
+                        <li>Fiabilité : nous garantissons la qualité de nos installations</li>
+                        <li>Satisfaction client : votre contentement est notre priorité</li>
+                        <li>Professionnalisme : nos équipes sont formées aux dernières techniques</li>
+                        <li>Réactivité : nous intervenons rapidement en cas de besoin</li>
+                    </ul>
+                </div>
+                <div class="image-column fade-in">
+                    <img src="/api/placeholder/600/400" alt="Équipe ASA Automatisme">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: var(--light-grey);">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Notre expertise</h2>
+            </div>
+            <div class="features-container">
+                <div class="feature-box fade-in">
+                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Sécurité</h3>
+                    <p>Nous concevons et installons des systèmes de sécurité adaptés à vos besoins spécifiques.</p>
+                </div>
+                <div class="feature-box fade-in">
+                    <div class="feature-icon"><i class="fas fa-cogs"></i></div>
+                    <h3>Automatisme</h3>
+                    <p>Nos solutions d'automatisme facilitent votre quotidien et sécurisent vos accès.</p>
+                </div>
+                <div class="feature-box fade-in">
+                    <div class="feature-icon"><i class="fas fa-tools"></i></div>
+                    <h3>Maintenance</h3>
+                    <p>Nous assurons l'entretien et le dépannage de vos installations pour garantir leur pérennité.</p>
+                </div>
+                <div class="feature-box fade-in">
+                    <div class="feature-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Intégration</h3>
+                    <p>Nous intégrons vos systèmes existants avec les nouvelles technologies pour une solution complète.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>A.S.A</h3>
+                    <p>Automatismes Sécurité Assistance est spécialiste en systèmes de sécurité et d'automatisme depuis plus de 15 ans. Nous concevons, installons et maintenons des solutions sur mesure pour les particuliers et les professionnels.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Nos services</h3>
+                    <ul>
+                        <li><a href="alarmes.html">Systèmes d'alarme</a></li>
+                        <li><a href="interphones.html">Interphones</a></li>
+                        <li><a href="portails.html">Portails automatiques</a></li>
+                        <li><a href="videosurveillance.html">Vidéosurveillance</a></li>
+                        <li><a href="controle-acces.html">Contrôle d'accès</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Rue de l'Automatisme, 75000 Paris</p>
+                    <p><i class="fas fa-phone"></i> 01 23 45 67 89</p>
+                    <p><i class="fas fa-envelope"></i> contact@asa-securite.fr</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Automatismes Sécurité Assistance (A.S.A). Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts corrigés -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/fixes.js"></script>
+</body>
+</html>

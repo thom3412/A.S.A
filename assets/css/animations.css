@@ -1,0 +1,166 @@
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Animation Classes - MODIFICATION CLEF: éléments visibles par défaut */
+.fade-in {
+    opacity: 1; /* Visible par défaut */
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Les éléments seront préparés pour animation après chargement de la page */
+.fade-in.ready-to-animate {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.fade-in.ready-to-animate.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slide-in-left {
+    opacity: 1; /* Visible par défaut */
+    transition: all 1s ease;
+}
+
+.slide-in-left.ready-to-animate {
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+.slide-in-left.ready-to-animate.appear {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide-in-right {
+    opacity: 1; /* Visible par défaut */
+    transition: all 1s ease;
+}
+
+.slide-in-right.ready-to-animate {
+    opacity: 0;
+    transform: translateX(50px);
+}
+
+.slide-in-right.ready-to-animate.appear {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.scale-in {
+    opacity: 1; /* Visible par défaut */
+    transition: all 1s ease;
+}
+
+.scale-in.ready-to-animate {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.scale-in.ready-to-animate.appear {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Animated Elements */
+.animated-icon {
+    transition: all 0.3s ease;
+}
+
+.animated-icon:hover {
+    transform: translateY(-10px);
+    color: var(--primary-orange);
+}
+
+.pulse-animation {
+    animation: pulse 2s infinite;
+}
+
+.rotate-hover:hover {
+    transition: transform 0.3s ease;
+    transform: rotate(10deg);
+}
+
+.zoom-hover:hover {
+    transition: transform 0.3s ease;
+    transform: scale(1.1);
+}
+
+/* Page Transitions */
+.page-transition {
+    animation: fadeIn 1s ease-out;
+}
+
+/* Button Animations */
+.btn-animated {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-animated:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.6s;
+}
+
+.btn-animated:hover:after {
+    left: 100%;
+}

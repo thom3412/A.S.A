@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarmes - ASA Automatisme</title>
+    <!-- CSS corrigés -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/quick-fix.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Script diagnostic -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('DOM chargé et prêt');
+        
+        // Forcer l'apparition immédiate des éléments animés
+        const fadeElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .scale-in');
+        console.log('Éléments animés trouvés:', fadeElements.length);
+        
+        fadeElements.forEach(function(el) {
+            el.classList.add('appear');
+            // Forcer l'affichage au cas où
+            el.style.opacity = '1';
+            el.style.transform = 'translateY(0)';
+        });
+    });
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <a href="index.html" class="logo">A.S.A</a>
+                <div class="hamburger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="#">Nos Services <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="alarmes.html">Alarmes</a>
+                            <a href="interphones.html">Interphones</a>
+                            <a href="portails.html">Portails</a>
+                            <a href="videosurveillance.html">Vidéosurveillance</a>
+                            <a href="pergolas.html">Pergolas</a>
+                            <a href="controle-acces.html">Contrôle d'accès</a>
+                        </div>
+                    </li>
+                    <li><a href="entreprise.html">L'Entreprise</a></li>
+                    <li><a href="recrutement.html">Recrutement</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="page-header-content">
+            <h1>Systèmes d'alarme</h1>
+            <p>Découvrez nos solutions d'alarme pour une protection optimale de votre domicile ou entreprise</p>
+        </div>
+    </header>
+
+    <section id="services" class="section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Nos solutions de sécurité</h2>
+            </div>
+            <div class="text-center fade-in">
+                <p>Découvrez nos solutions d'automatisme et de sécurité adaptées à vos besoins spécifiques. Que vous soyez un particulier ou un professionnel, nous vous proposons des systèmes performants et fiables.</p>
+            </div>
+            <div class="service-list features-grid">
+                <div class="feature-card fade-in" id="alarmes">
+                    <div class="feature-img" style="background-image: url('/api/placeholder/400/300');"></div>
+                    <div class="feature-content">
+                        <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                        <h3>Alarmes</h3>
+                        <p>Systèmes d'alarme modernes et fiables pour une protection 24/7 de votre propriété. Nos solutions s'adaptent à toutes les configurations.</p>
+                        <a href="alarmes.html" class="btn">En savoir plus</a>
+                    </div>
+                </div>
+                <div class="feature-card fade-in" id="portails">
+                    <div class="feature-img" style="background-image: url('/api/placeholder/400/300');"></div>
+                    <div class="feature-content">
+                        <div class="feature-icon"><i class="fas fa-door-open"></i></div>
+                        <h3>Portails Automatiques</h3>
+                        <p>Installation et maintenance de portails sur mesure pour sécuriser et embellir votre entrée.</p>
+                        <a href="portails.html" class="btn">En savoir plus</a>
+                    </div>
+                </div>
+                <div class="feature-card fade-in" id="videosurveillance">
+                    <div class="feature-img" style="background-image: url('/api/placeholder/400/300');"></div>
+                    <div class="feature-content">
+                        <div class="feature-icon"><i class="fas fa-video"></i></div>
+                        <h3>Vidéosurveillance</h3>
+                        <p>Caméras HD et solutions avancées pour surveiller votre espace en temps réel.</p>
+                        <a href="videosurveillance.html" class="btn">En savoir plus</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Types d'alarmes Section -->
+    <section class="section" style="background-color: var(--light-grey);">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Types d'alarmes</h2>
+            </div>
+            <div class="features-container">
+                <div class="feature-box fade-in">
+                    <div class="feature-icon"><i class="fas fa-home"></i></div>
+                    <h3>Alarmes résidentielles</h3>
+                    <p>Protégez votre domicile avec nos systèmes d'alarme adaptés aux maisons et appartements.</p>
+                </div>
+                <div class="feature-box fade-in">
+                    <div class="feature-icon"><i class="fas fa-store"></i></div>
+                    <h3>Alarmes commerciales</h3>
+                    <p>Sécurisez vos locaux professionnels avec des solutions spécifiques pour les commerces.</p>
+                </div>
+                <div class="feature-box fade-in">
+                    <div class="feature-icon"><i class="fas fa-industry"></i></div>
+                    <h3>Alarmes industrielles</h3>
+                    <p>Protégez vos sites industriels avec des systèmes robustes et performants.</p>
+                </div>
+                <div class="feature-box fade-in">
+                    <div class="feature-icon"><i class="fas fa-wifi"></i></div>
+                    <h3>Alarmes connectées</h3>
+                    <p>Pilotez votre alarme à distance depuis votre smartphone pour une sécurité optimale.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-content fade-in">
+                <h2>Prêt à sécuriser votre espace ?</h2>
+                <p>Contactez-nous pour une étude personnalisée<!-- Suite du contenu -->
+                    <p>Contactez-nous pour une étude personnalisée et un devis gratuit pour votre système d'alarme.</p>
+                    <a href="contact.html" class="btn">Demander un devis</a>
+                </div>
+            </div>
+        </section>
+    
+        <footer>
+            <div class="container">
+                <div class="footer-container">
+                    <div class="footer-col">
+                        <h3>A.S.A</h3>
+                        <p>Automatismes Sécurité Assistance est spécialiste en systèmes de sécurité et d'automatisme depuis plus de 15 ans. Nous concevons, installons et maintenons des solutions sur mesure pour les particuliers et les professionnels.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Nos services</h3>
+                        <ul>
+                            <li><a href="alarmes.html">Systèmes d'alarme</a></li>
+                            <li><a href="interphones.html">Interphones</a></li>
+                            <li><a href="portails.html">Portails automatiques</a></li>
+                            <li><a href="videosurveillance.html">Vidéosurveillance</a></li>
+                            <li><a href="controle-acces.html">Contrôle d'accès</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Contact</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Rue de l'Automatisme, 75000 Paris</p>
+                        <p><i class="fas fa-phone"></i> 01 23 45 67 89</p>
+                        <p><i class="fas fa-envelope"></i> contact@asa-securite.fr</p>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p>&copy; 2025 Automatismes Sécurité Assistance (A.S.A). Tous droits réservés.</p>
+                </div>
+            </div>
+        </footer>
+    
+        <!-- Scripts corrigés -->
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/animations.js"></script>
+        <script src="assets/js/fixes.js"></script>
+    </body>
+    </html>

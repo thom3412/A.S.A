@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A.S.A - Automatismes Sécurité Assistance</title>
+    
+    <!-- Favicon pour navigateurs standards -->
+    <link rel="icon" href="/assets/img/logo.jpg" type="image/png">
+    <!-- Favicon pour iOS -->
+    <link rel="apple-touch-icon" href="assets/img/logo.jpg">
+    <!-- Favicon pour Internet Explorer -->
+    <link rel="shortcut icon" href="assets/img/logo.jpg" type="image/x-icon">
+    
+    <!-- Fichiers CSS externes -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/animations.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Script de débogage pour le slider -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('DOM fully loaded - Slider debug mode');
+        
+        // Débogage des points du slider
+        const sliderDots = document.querySelectorAll('.slider-dot');
+        if (sliderDots.length > 0) {
+            console.log('Found ' + sliderDots.length + ' slider dots');
+            
+            sliderDots.forEach((dot, index) => {
+                console.log('Adding click event to dot ' + index);
+                dot.addEventListener('click', function() {
+                    console.log('Dot ' + index + ' clicked');
+                    
+                    // Supprimer la classe active de tous les dots et slides
+                    document.querySelectorAll('.slider-dot').forEach(d => d.classList.remove('active'));
+                    document.querySelectorAll('.slide').forEach(s => s.classList.remove('active'));
+                    
+                    // Ajouter la classe active au dot cliqué et au slide correspondant
+                    this.classList.add('active');
+                    const slides = document.querySelectorAll('.slide');
+                    if (slides.length > index) {
+                        slides[index].classList.add('active');
+                    }
+                });
+            });
+        } else {
+            console.error('No slider dots found! Check your HTML structure.');
+        }
+    });
+    </script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">A.S.A</a>
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li class="dropdown">
+                    <a href="#">Nos Services <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="alarmes.html">Alarmes</a>
+                        <a href="interphones.html">Interphones</a>
+                        <a href="portails.html">Portails</a>
+                        <a href="videosurveillance.html">Vidéosurveillance</a>
+                        <a href="pergolas.html">Pergolas</a>
+                        <a href="controle-acces.html">Contrôle d'accès</a>
+                    </div>
+                </li>
+                <li><a href="about.html">L'Entreprise</a></li>
+                <li><a href="recrutement.html">Recrutement</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section avec Slider -->
+    <section class="hero">
+        <div class="slider">
+            <div class="slide active" style="background-image: url('/assets/img/barriere.jpg');">
+                <div class="slide-content">
+                    <h1>Solutions d'automatisme pour votre sécurité</h1>
+                    <p>Nous concevons et installons des systèmes d'automatisme sur mesure pour sécuriser vos espaces professionnels et résidentiels.</p>
+                    <a href="#contact" class="btn">Demander un devis</a>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('/assets/img/pergola.jpg');">
+                <div class="slide-content">
+                    <h1>Pergolas bioclimatiques élégantes</h1>
+                    <p>Optimisez votre espace extérieur avec nos pergolas motorisées offrant confort, protection et esthétique pour profiter de votre terrasse en toute saison.</p>
+                    <a href="pergolat.html" class="btn">Découvrir nos solutions</a>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('/assets/img/portail1.jpg');">
+                <div class="slide-content">
+                    <h1>Portails automatiques sécurisés</h1>
+                    <p>Alliant sécurité et esthétique, nos portails automatiques s'adaptent à tous vos besoins.</p>
+                    <a href="portails.html" class="btn">Voir nos réalisations</a>
+                </div>
+            </div>
+        </div>
+        <div class="slider-nav">
+            <div class="slider-dot active" data-slide="0"></div>
+            <div class="slider-dot" data-slide="1"></div>
+            <div class="slider-dot" data-slide="2"></div>
+        </div>
+    </section>
+
+    <!-- Section Introduction -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Bienvenue chez A.S.A</h2>
+            </div>
+            <div class="text-center fade-in">
+                <p>Automatismes Sécurité Assistance (A.S.A) est une entreprise spécialisée dans les solutions de sécurité et d'automatisme depuis plus de 15 ans. Notre mission est de vous proposer des solutions sur mesure pour sécuriser vos espaces et faciliter votre quotidien.</p>
+                <p>Notre expertise couvre l'installation de fermetures automatiques, les systèmes d'alarmes, la vidéosurveillance et les solutions de contrôle d'accès pour les particuliers et les professionnels.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Services -->
+    <section class="section" style="background-color: var(--light-grey);">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Nos Services</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <div class="feature-img" style="background-image: url('/assets/img/alarme.jpg');"></div>
+                    <div class="feature-content">
+                        <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                        <h3>Systèmes d'alarme</h3>
+                        <p>Protection optimale contre les intrusions avec des systèmes d'alarme intelligents et connectés.</p>
+                        <a href="alarmes.html" class="btn">En savoir plus</a>
+                    </div>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-img" style="background-image: url('/assets/img/caméra.jpg');"></div>
+                    <div class="feature-content">
+                        <div class="feature-icon"><i class="fas fa-video"></i></div>
+                        <h3>Vidéosurveillance</h3>
+                        <p>Surveillance en temps réel de vos espaces avec des caméras haute définition.</p>
+                        <a href="videosurveillance.html" class="btn">En savoir plus</a>
+                    </div>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-img" style="background-image: url('/assets/img/portail1.jpg');"></div>
+                    <div class="feature-content">
+                        <div class="feature-icon"><i class="fas fa-door-open"></i></div>
+                        <h3>Portails automatiques</h3>
+                        <p>Installation et maintenance de portails automatiques pour contrôler les accès à votre propriété.</p>
+                        <a href="portails.html" class="btn">En savoir plus</a>
+                    </div>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-img" style="background-image: url('/assets/img/interphone_intratone_poteaublanc.jpg');"></div>
+                    <div class="feature-content">
+                        <div class="feature-icon"><i class="fas fa-phone-volume"></i></div>
+                        <h3>Interphones</h3>
+                        <p>Systèmes d'interphonie audio et vidéo pour contrôler les accès à votre domicile ou entreprise.</p>
+                        <a href="interphones.html" class="btn">En savoir plus</a>
+                    </div>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-img" style="background-image: url('/assets/img/contrôle-daccès.jpg');"></div>
+                    <div class="feature-content">
+                        <div class="feature-icon"><i class="fas fa-id-card"></i></div>
+                        <h3>Contrôle d'accès</h3>
+                        <p>Solutions de contrôle d'accès avec badges, codes ou biométrie pour sécuriser vos locaux.</p>
+                        <a href="controle-acces.html" class="btn">En savoir plus</a>
+                    </div>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-img" style="background-image: url('/assets/img/maintenance.webp');"></div>
+                    <div class="feature-content">
+                        <div class="feature-icon"><i class="fas fa-tools"></i></div>
+                        <h3>Maintenance</h3>
+                        <p>Service de maintenance et dépannage pour assurer la pérennité de vos installations.</p>
+                        <a href="contact.html" class="btn">En savoir plus</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Pourquoi nous choisir -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Pourquoi nous choisir ?</h2>
+            </div>
+            <div class="features-container">
+                <div class="feature-box fade-in">
+                    <div class="feature-icon"><i class="fas fa-user-tie"></i></div>
+                    <h3>Expertise</h3>
+                    <p>Plus de 15 ans d'expérience dans le domaine de la sécurité et de l'automatisme.</p>
+                </div>
+                <div class="feature-box fade-in">
+                    <div class="feature-icon"><i class="fas fa-certificate"></i></div>
+                    <h3>Qualité</h3>
+                    <p>Utilisation exclusive de produits de qualité issus des meilleurs fabricants.</p>
+                </div>
+                <div class="feature-box fade-in">
+                    <div class="feature-icon"><i class="fas fa-handshake"></i></div>
+                    <h3>Service personnalisé</h3>
+                    <p>Solutions sur mesure adaptées à vos besoins spécifiques et à votre budget.</p>
+                </div>
+                <div class="feature-box fade-in">
+                    <div class="feature-icon"><i class="fas fa-clock"></i></div>
+                    <h3>Réactivité</h3>
+                    <p>Intervention rapide de nos équipes en cas de besoin ou de panne.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Témoignages -->
+    <section class="section" style="background-color: var(--light-grey);">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Ce que disent nos clients</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-content">
+                        <p>"Entreprise très professionnelle. Installation rapide et soignée de notre portail automatique. Service après-vente au top. Je recommande vivement !"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="background-image: url('/api/placeholder/60/60');"></div>
+                        <div class="testimonial-info">
+                            <h4>Pierre D.</h4>
+                            <p>Particulier</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-content">
+                        <p>"A.S.A a installé notre système de vidéosurveillance et de contrôle d'accès. Équipe compétente et à l'écoute. Matériel performant et fiable."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="background-image: url('/api/placeholder/60/60');"></div>
+                        <div class="testimonial-info">
+                            <h4>Sophie M.</h4>
+                            <p>Gérante de boutique</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-content">
+                        <p>"Très satisfait de l'installation de notre système d'alarme. Le technicien a pris le temps de nous expliquer le fonctionnement et les fonctionnalités."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="background-image: url('/api/placeholder/60/60');"></div>
+                        <div class="testimonial-info">
+                            <h4>Jean L.</h4>
+                            <p>Particulier</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-content fade-in">
+                <h2>Prêt à sécuriser votre espace ?</h2>
+                <p>Nos experts sont à votre disposition pour étudier vos besoins et vous proposer des solutions adaptées.</p>
+                <a href="contact.html" class="btn">Contactez-nous dès maintenant</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>A.S.A</h3>
+                    <p>Automatismes Sécurité Assistance est spécialiste en systèmes de sécurité et d'automatisme depuis plus de 15 ans. Nous concevons, installons et maintenons des solutions sur mesure pour les particuliers et les professionnels.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Nos services</h3>
+                    <ul>
+                        <li><a href="alarmes.html">Systèmes d'alarme</a></li>
+                        <li><a href="interphones.html">Interphones</a></li>
+                        <li><a href="portails.html">Portails automatiques</a></li>
+                        <li><a href="videosurveillance.html">Vidéosurveillance</a></li>
+                        <li><a href="controle-acces.html">Contrôle d'accès</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Rue de l'Automatisme, 75000 Paris</p>
+                    <p><i class="fas fa-phone"></i> 01 23 45 67 89</p>
+                    <p><i class="fas fa-envelope"></i> contact@asa-securite.fr</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Automatismes Sécurité Assistance (A.S.A). Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts JavaScript externes -->
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/animations.js"></script>
+</body>
+</html>
